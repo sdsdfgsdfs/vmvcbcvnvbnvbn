@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- header start -->
+    <header>
+        <div class="header-wrapper container">
+            <div class="brand-logo">
+                <img src="img/logo/logo.png" alt="logo">
+            </div>
+            <nav class="main-nav">
+                <div class="nav-dropdown">
+                    <button onclick="toggleDropdown(event, 'navDropdown1')" class="dropdown-button">
+                        <p>Product</p>
+                        <img src="img/header/arrow-down.svg" alt="arrow-down" class="dropdown-arrow">
+                    </button>
+                    <div id="navDropdown1" class="dropdown-menu">
+                        <a href="#">Product Feature 1</a>
+                        <a href="#">Product Feature 2</a>
+                        <a href="#">Product Feature 3</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button onclick="toggleDropdown(event, 'navDropdown2')" class="dropdown-button">
+                        <p>Developers</p>
+                        <img src="img/header/arrow-down.svg" alt="arrow-down" class="dropdown-arrow">
+                    </button>
+                    <div id="navDropdown2" class="dropdown-menu">
+                        <a href="#">Developer Docs</a>
+                        <a href="#">API Reference</a>
+                        <a href="#">Tutorials</a>
+                    </div>
+                </div>
+                <a href="#">Beta</a>
+                <a href="#">Pricing</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="cta-button">Start your project</a>
+                <a href="#" class="login-button">Sign in</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero-section container">
+        <div class="hero-content">
+            <div class="content-label">
+                <img src="img/banner/storage.svg" alt="storage">
+                <p>Storage</p>
+            </div>
+            <h1 class="hero-heading">Store and serve <br> any type of digital content</h1>
+            <div class="hero-description">
+                An open source Object store service with unlimited scalability, for any file type.
+            </div>
+            <div class="hero-description">
+                With custom policies and permissions that are familiar and easy to implement.
+            </div>
+            <a href="#" class="primary-button">Start a project</a>
+        </div>
+        <div class="hero-image">
+            <img src="img/banner/banner-img.png" alt="banner-img">
+        </div>
+    </section>
+    
+    <section class="features-section container">
+        <div class="feature-card">
+            <img src="img/after-banner/1.svg" class="feature-icon" alt="1">
+            <h3 class="feature-title">Interoperable</h3>
+            <div class="feature-description">
+                Integrates well with the rest of Supabase ecosystem, including Auth and Postgres.
+            </div>
+        </div>
+        <div class="feature-card">
+            <img src="img/after-banner/2.svg" class="feature-icon" alt="1">
+            <h3 class="feature-title">Lightning fast</h3>
+            <div class="feature-description">
+                Thin API server layer that leverages Postgres' permissions and performance.
+            </div>
+        </div>
+        <div class="feature-card">
+            <img src="img/after-banner/3.svg" class="feature-icon" alt="1">
+            <h3 class="feature-title">Dependable</h3>
+            <div class="feature-description">
+                Enterprise-level scalability and durability.
+            </div>
+        </div>
+    </section>
+    
+    <section class="dashboard-section container">
+        <div class="section-intro">
+            <h2 class="section-title">Sleek dashboard for managing your media</h2>
+            <div class="section-subtitle">A complete Object Explorer so that any of your team can use.</div>
+            <div class="section-description">
+                Drag and drop uploading, moving objects, and multiple object selection. As easy
+                as working on your desktop.
+            </div>
+        </div>
+        <div class="dashboard-preview">
+            <img src="img/about/image.png" alt="img">
+        </div>
+    </section>
+    
+    <section class="integration-section container">
+        <h2 class="section-title">Integrates natively<br> with Supabase Auth</h2>
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    <p>Using Postgres Row Level Security to create Object access rules.</p>
+                    <img src="img/faq/arrow.svg" alt="arrow" class="accordion-arrow">
+                </button>
+                <div class="accordion-content">
+                    <p>Storage Authorization is built around Postgres so that you can use any combination of SQL,
+                        Postgres functions, and even your own metadata to write policies.</p>
+                    <a href="#" class="documentation-link">Explore documentation</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    <p>File access controls with custom policies</p>
+                    <img src="img/faq/arrow.svg" alt="arrow" class="accordion-arrow">
+                </button>
+                <div class="accordion-content">
+                    <p>Create fine-grained access controls for your files using SQL policies that integrate directly with your authentication system.</p>
+                    <a href="#" class="documentation-link">Explore documentation</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    <p>Scalable storage infrastructure</p>
+                    <img src="img/faq/arrow.svg" alt="arrow" class="accordion-arrow">
+                </button>
+                <div class="accordion-content">
+                    <p>Our storage solution scales automatically to handle any amount of data while maintaining high performance and reliability.</p>
+                    <a href="#" class="documentation-link">Explore documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="main-footer container">
+        <div class="footer-logo">
+            <img src="img/logo/logo.png" alt="">
+        </div>
+        <div class="footer-nav">
+            <div class="footer-column">
+                <div class="column-title">Product</div>
+                <div class="column-links">
+                    <div class="footer-link">Database</div>
+                    <div class="footer-link">Authentication</div>
+                    <div class="footer-link">Storage</div>
+                    <div class="footer-link">Functions</div>
+                    <div class="footer-link">Pricing</div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="column-title">Resources</div>
+                <div class="column-links">
+                    <div class="footer-link">Documentation</div>
+                    <div class="footer-link">Guides</div>
+                    <div class="footer-link">Blog</div>
+                    <div class="footer-link">Community</div>
+                    <div class="footer-link">Support</div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="column-title">Company</div>
+                <div class="column-links">
+                    <div class="footer-link">About</div>
+                    <div class="footer-link">Careers</div>
+                    <div class="footer-link">Contact</div>
+                    <div class="footer-link">Press</div>
+                    <div class="footer-link">Legal</div>
+                </div>
+            </div>
+            <div class="footer-column">
+                <div class="column-title">Social</div>
+                <div class="column-links">
+                    <div class="footer-link">Twitter</div>
+                    <div class="footer-link">GitHub</div>
+                    <div class="footer-link">Discord</div>
+                    <div class="footer-link">LinkedIn</div>
+                    <div class="footer-link">YouTube</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+</body>
+</html>

@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: white;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../media/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #181818;
+}
+
+/* Header Styles */
+header {
+    border-bottom: 1px solid white;
+}
+
+.header-wrapper {
+    display: flex;
+    padding: 20px 0px;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.main-nav a {
+    display: flex;
+}
+
+.main-nav a, .main-nav p {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.header-actions {
+    display: flex;
+    margin-left: auto;
+    gap: 16px;
+    align-items: center;
+}
+
+.cta-button {
+    padding: 7px 11px;
+    background-color: #24B47E;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.login-button {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.dropdown-button {
+    display: flex;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: #181818;
+    border: 1px solid #333;
+    padding: 10px;
+    min-width: 80px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dropdown-show {
+    display: flex;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 115px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    width: 566px;
+    gap: 16px;
+    width: 100%;
+}
+
+.content-label {
+    display: flex;
+    gap: 12px;
+    font-size: 18px;
+}
+
+.hero-heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+
+.hero-description {
+    font-size: 14px;
+    font-weight: 400;
+    width: 467px;
+}
+
+.primary-button {
+    margin-top: auto;
+    padding: 9px 17px;
+    background-color: #24B47E;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 133px;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    width: 280px;
+}
+
+.feature-icon {
+    display: flex;
+    height: 32px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.feature-description {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    margin-top: 192px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section-description {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.section-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    padding: 8px 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+}
+
+.dropdown-show {
+    display: block;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s;
+}
+
+.dropdown-button.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* Стили для аккордеона */
+.accordion-item {
+    border-bottom: 1px solid #333;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accordion-header p {
+    margin-right: 16px;
+    font-weight: 500;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+.accordion-arrow {
+    transition: transform 0.3s;
+}
+
+.accordion-header.active .accordion-arrow {
+    transform: rotate(180deg);
+}
+.dashboard-preview img {
+    width: 100%;
+}
+
+/* Integration Section */
+.integration-section {
+    margin: 100px auto 200px;
+}
+
+.accordion-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.accordion-content {
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    display: none;
+}
+
+.documentation-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #24B47E;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Footer Styles */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 50px 0;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-column {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.column-title {
+    color: #666666;
+    font-weight: 300;
+}
+
+.column-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 300;
+}
+
+.footer-link {
+    cursor: pointer;
+}
+/* footer end */
