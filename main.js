@@ -2,7 +2,7 @@ function toggleDropdown(event, dropdownId) {
     event.preventDefault();
     event.stopPropagation();
     
-    // Закрываем все открытые меню
+    
     document.querySelectorAll('.dropdown-menu').forEach(menu => {
         if (menu.id !== dropdownId) {
             menu.classList.remove('dropdown-show');
@@ -10,7 +10,7 @@ function toggleDropdown(event, dropdownId) {
         }
     });
     
-    // Переключаем текущее меню
+    
     const dropdown = document.getElementById(dropdownId);
     const button = dropdown.previousElementSibling;
     
@@ -18,7 +18,7 @@ function toggleDropdown(event, dropdownId) {
     button.classList.toggle('active');
 }
 
-// Функция для переключения аккордеона
+
 function toggleAccordion(button) {
     const item = button.parentElement;
     const content = button.nextElementSibling;
@@ -26,7 +26,7 @@ function toggleAccordion(button) {
     button.classList.toggle('active');
     content.classList.toggle('active');
     
-    // Закрываем другие открытые элементы аккордеона
+    
     const allItems = document.querySelectorAll('.accordion-item');
     allItems.forEach(accordionItem => {
         if (accordionItem !== item) {
@@ -36,7 +36,7 @@ function toggleAccordion(button) {
     });
 }
 
-// Закрытие меню при клике вне его области
+
 document.addEventListener('click', function(e) {
     if (!e.target.closest('.nav-dropdown')) {
         document.querySelectorAll('.dropdown-menu').forEach(menu => {
